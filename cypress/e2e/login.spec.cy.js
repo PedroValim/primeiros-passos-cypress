@@ -12,7 +12,7 @@ describe('template spec', () => {
   }
 
   it('Login - Success', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(selectorsList.usernameField).type('Admin');
     cy.get(selectorsList.passwordField).type('admin123');
     cy.get(selectorsList.loginButton).click();
@@ -20,7 +20,7 @@ describe('template spec', () => {
     cy.get(selectorsList.dashboardGrid)
   })
   it('Login - Fail', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(selectorsList.usernameField).type('Test');
     cy.get(selectorsList.passwordField).type('Test');
     cy.get(selectorsList.loginButton).click();
